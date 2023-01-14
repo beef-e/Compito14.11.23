@@ -8,7 +8,6 @@ let randomico;
 function setup() {
 	createCanvas(w, h);
 	background(0, 0, 0);
-	stroke(255, 255, 255);
 }
 
 function draw() {
@@ -18,9 +17,10 @@ function draw() {
 		for (let i = 0; i < 20; i++) {
 			randomico = random(0, 2);
 			randomico = parseInt(randomico);
-			if (randomico === 0) {
+			if (randomico % 2 == 0) {
 				///0=sinistra destra
 				disegnaLineaDestra();
+				//disegnaLineaSinistra();
 			} else {
 				//1=destra sinistra
 				disegnaLineaSinistra();
@@ -44,11 +44,15 @@ function draw() {
 }
 
 function disegnaLineaDestra() {
+	stroke(255, 255, 255);
+
 	line(x, y, x + increment, y + increment);
 	x = x + increment;
 }
 
 function disegnaLineaSinistra() {
-	line(x + increment, y + increment, x, y);
+	stroke(255, 255, 255);
+
+	line(x + increment, y, x, y + increment);
 	x = x + increment;
 }
