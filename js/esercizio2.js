@@ -1,8 +1,8 @@
 let l = 100;
 let w = l * 8;
 let h = l * 8;
-let x = 0;
-let y = 0;
+x = 0;
+y = 0;
 
 //sqaure(x, y, lato)
 
@@ -14,26 +14,14 @@ function draw() {
 	let b = color(0, 0, 0);
 	let whi = color(255, 255, 255);
 
-	for (let i = 0; i < 8; i++) {
-		disegnaBlacks(b);
-		disegnaWhites(whi);
-	}
-
-	y = y + l;
-
-	for (let i = 0; i < 8; i++) {
-		disegnaWhites(whi);
-		disegnaBlacks(b);
-	}
-
-	/*while (y < 800) {
+	while (y < 800) {
 		for (let i = 0; i < 8; i++) {
 			disegnaBlacks(b);
 			disegnaWhites(whi);
 		}
 
 		y = y + l;
-		console.log(y);
+		x = 0;
 
 		for (let i = 0; i < 8; i++) {
 			disegnaWhites(whi);
@@ -41,8 +29,8 @@ function draw() {
 		}
 
 		y = y + l;
-		console.log(y);
-	}*/
+		x = 0;
+	}
 }
 
 function disegnaBlacks(b) {
