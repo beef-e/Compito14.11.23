@@ -12,8 +12,14 @@ function setup() {
 }
 
 function draw() {
+	createCanvas(w, h);
 	background(0, 0, 0);
 	square(x, y, l);
+
+	while (l < 200) {
+		l = l + 1;
+	}
+	while (l < 10) {}
 
 	if (l < 200) {
 		l = l + 1;
@@ -22,8 +28,7 @@ function draw() {
 	if (l >= 200) {
 		while (l > 10) {
 			l = l - 1;
+			square(x, y, l);
 		}
 	}
-
-	clear();
 }
